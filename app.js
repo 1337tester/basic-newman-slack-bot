@@ -22,7 +22,7 @@ class TestRunContext {
         this.testResultFailed = newmanResult.run.stats.assertions.failed
         this.failures         = newmanResult.run.failures
     }
-    
+
     get percentagePassed() {
         return (this.testResultTotal * 100 / (this.testResultTotal + this.testResultFailed)).toFixed(2)
     }
@@ -30,7 +30,7 @@ class TestRunContext {
     get envFileName() {
         return this.environment === undefined ? "No Environment file specified for the Newman Run" : this.environment
     }
-    
+
     get failsList() {
         return this.failures.length > 0
             ? this.failures.reduce((accumulator, current) => `${accumulator} *${current.error.name}:* ${current.error.test} - _${current.error.message}_\n\n`, '')
@@ -74,7 +74,7 @@ class TestRunContext {
                             "title": "No. Of Assertions",
                             "value": `${this.testResultTotal}`,
                             "short": true
-                            
+
                         },
                         {
                             "title": "No. Of Failures",
@@ -105,7 +105,7 @@ class TestRunContext {
 let executeNewman = (environmentFile, iterationCount) => {
     return new Promise((resolve, reject) => {
         newman.run({
-            collection: './collections/Restful_Booker_Collection.json',
+            collection: './collections/Tests - Referrals API.postman_collection.json',
             environment: environmentFile,
             iterationCount: iterationCount,
             reporters: ['cli', 'html'],
@@ -149,28 +149,28 @@ function InvalidName(responseURL, message, res) {
     return;
 }
 
-app.post("/newmanRun", (req, res) => {   
-    
+app.post("/newmanRun", (req, res) => {
+
     const responseURL = req.body.response_url
     const channelText = req.body.text
 
     const enteredEnv     = (channelText).split(" ")[0]
     const iterationCount = parseInt((channelText).split(" ")[1])
-    
-    const filename = `./environments/${enteredEnv}_Restful_Booker_Environment.json`
-    
+
+    const filename = `./environments/${enteredEnv}.postman_environment.json`
+
     const fileNameCheck = fs.existsSync(filename)
 
     if (channelText.length === 0) {
-        
+
         message = "Please enter an valid *Environment* name."
-        
+
         return InvalidName(responseURL, message, res)
 
     } else if (fileNameCheck === false) {
-        
-        message = `Could not find the *${path.basename(filename)}* environment file. Please try again.` 
-        
+
+        message = `Could not find the *${path.basename(filename)}* environment file. Please try again.`
+
         return InvalidName(responseURL, message, res)
 
     } else {
@@ -181,7 +181,7 @@ app.post("/newmanRun", (req, res) => {
         method: 'post',
         url: `${responseURL}`,
         headers: { "Content-Type": "application/json" },
-        data: { 
+        data: {
             "response_type": "in_channel",
             "attachments": [
                 {
@@ -213,7 +213,7 @@ app.post("/newmanRun", (req, res) => {
             method: 'post',
             url: `${responseURL}`,
             headers: { "Content-Type": "application/json" },
-            data: { 
+            data: {
                 "response_type": "in_channel",
                 "attachments": [
                     {

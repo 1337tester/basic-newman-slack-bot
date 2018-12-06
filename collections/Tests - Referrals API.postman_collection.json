@@ -1,0 +1,815 @@
+{
+	"info": {
+		"_postman_id": "38767be4-5b01-4d0e-a504-e44247a89966",
+		"name": "Tests - Referrals API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "129345c1-85ee-4199-9460-9f9b6ed0aef1",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"",
+							"pm.test(\"Tenant must be 'all'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    ",
+							"    pm.expect(jsonData.Tenant).to.eql(\"all\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"type": "text",
+						"value": "all"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/health/check",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"health",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referring User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});",
+							"",
+							"pm.test(\"GlobalUserId is 'referring_id_0000001'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.GlobalUserId).to.eql(\"referring_id_0000001\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referringuser/referring_id_0000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referringuser",
+						"referring_id_0000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referring User Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});",
+							"",
+							"pm.test(\"GlobalUserId is 'referring_id_0000001'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.GlobalUserId).to.eql(\"referring_id_0000001\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referringuser/referring_id_0000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referringuser",
+						"referring_id_0000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referring User - User Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referringuser/invalid_user_id",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referringuser",
+						"invalid_user_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referring User - Invalid Accept Header",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return - 406 Not Acceptable\", function () {",
+							"    pm.response.to.have.status(406);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "test/type"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referringuser/testuser_id_0000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referringuser",
+						"testuser_id_0000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referral Report - JSON",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralreport/?fromDate=2018-11-01T00:00:00&toDate=2018-11-30T00:00:00&usergraduated=true",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralreport",
+						""
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2018-11-01T00:00:00"
+						},
+						{
+							"key": "toDate",
+							"value": "2018-11-30T00:00:00"
+						},
+						{
+							"key": "usergraduated",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referral Report - CSV",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'text/csv; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    console.log(contentHeaderValue);",
+							"});",
+							"",
+							"pm.test(\"Content-Disposition header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Disposition\");",
+							"});",
+							"",
+							"pm.test(\"Content-Disposition header value is 'attachment;filename=ReferringUsers.csv'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Disposition\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"attachment;filename=ReferringUsers.csv\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "text/csv",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralreport/?fromDate=2018-11-01T00:00:00&toDate=2018-11-30T00:00:00&usergraduated=true",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralreport",
+						""
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2018-11-01T00:00:00"
+						},
+						{
+							"key": "toDate",
+							"value": "2018-11-30T00:00:00"
+						},
+						{
+							"key": "usergraduated",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referral Report - Invalid Accept Header",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return - 406 Not Acceptable\", function () {",
+							"    pm.response.to.have.status(406);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "test/type"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralreport/?fromDate=2018-11-01T00:00:00&toDate=2018-11-30T00:00:00",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralreport",
+						""
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2018-11-01T00:00:00"
+						},
+						{
+							"key": "toDate",
+							"value": "2018-11-30T00:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referred User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee3df54e-5f5d-42d0-af82-6617725a9e4a",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "165e8ee7-3b88-4453-b9a5-0601b588315d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referreduser/referred_id_0000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referreduser",
+						"referred_id_0000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referred User - User Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee3df54e-5f5d-42d0-af82-6617725a9e4a",
+						"exec": [
+							"pm.test(\"Should return 404\", function () {",
+							"    pm.response.to.have.status(404);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "165e8ee7-3b88-4453-b9a5-0601b588315d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referreduser/invalid_id",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referreduser",
+						"invalid_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referred User - Invalid Accept Header",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee3df54e-5f5d-42d0-af82-6617725a9e4a",
+						"exec": [
+							"pm.test(\"Should return - 406 Not Acceptable\", function () {",
+							"    pm.response.to.have.status(406);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "165e8ee7-3b88-4453-b9a5-0601b588315d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "test/type"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referreduser/testuser_id_0000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referreduser",
+						"testuser_id_0000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Referring User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 200\", function () {",
+							"    pm.response.to.have.status(200);    ",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header value is 'application/json; charset=utf-8'\", function () {",
+							"    var contentHeaderValue = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentHeaderValue).to.eql(\"application/json; charset=utf-8\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralcode/00000000-0000-0000-0000-000000000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralcode",
+						"00000000-0000-0000-0000-000000000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Referring User - Invalid Code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return 404\", function () {",
+							"    pm.response.to.have.status(404);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralcode/invalid-referral-code",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralcode",
+						"invalid-referral-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Referring User - Invalid Accept Header",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca35fd67-46f9-4a70-9467-12e1eac21a9f",
+						"exec": [
+							"pm.test(\"Should return - 406 Not Acceptable\", function () {",
+							"    pm.response.to.have.status(406);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Tenant",
+						"value": "uk"
+					},
+					{
+						"key": "Accept",
+						"value": "test/type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BaseUrl}}api/referralcode/00000000-0000-0000-0000-000000000001",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"referralcode",
+						"00000000-0000-0000-0000-000000000001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

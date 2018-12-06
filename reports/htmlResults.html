@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Postman - Reports</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script type="text/javascript">
+        //custom script
+        $(function(){
+            $('.panel').filter(function(){ return $('.tego-bg-red', this).length})
+                    .find('.panel-heading')
+                    .removeClass('tego-bg-green')
+                    .addClass('tego-bg-red')
+        })
+  </script>
+    <style>
+        .tego-bg-red .panel-title, .tego-bg-green .panel-title {
+            color: #fff;
+        }
+        .tego-bg-red {
+            background-color: #e74c3c !important;
+        }
+        .tego-bg-green {
+            background-color: #27ae60 !important;
+        }
+        .tego-color-red {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .tego-color-green {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+    <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Test Run Information</div>
+        <div class="panel-body">
+            <div class="col-md-3">Collection</div><div class="col-md-9">Tests - Referrals API</div>
+            <div class="col-md-3">Environment</div><div class="col-md-9">QA102</div>
+            <div class="col-md-3">Time of Run</div><div class="col-md-9">Thu Dec 06 2018 19:02:54 GMT+0000 (Greenwich Mean Time)</div>
+        </div>
+      </div>
+ 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Test Run Summary</div>
+        <div class="panel-body">
+                <div class="col-md-4">Iterations</div><div class="col-md-4">1</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Requests</div><div class="col-md-4">14</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Prerequest Scripts</div><div class="col-md-4">3</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Test Scripts</div><div class="col-md-4">14</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Assertions</div><div class="col-md-4">33</div><div class="col-md-4">0</div>
+
+                <div class="col-md-12">&nbsp;</div>
+                <div class="col-md-6">Total run duration</div><div class="col-md-2">1151ms</div>
+                <div class="col-md-6">Total data received</div><div class="col-md-2">2.11KB (approx)</div>
+                <div class="col-md-6">Average response time</div><div class="col-md-2">55ms</div>
+
+                <div class="col-md-12">&nbsp;</div>
+                <div class="col-md-3"><strong>Total Failures</strong></div><div class="col-md-2 "><strong>0</strong></div>
+                
+        </div>
+    </div>
+    </div>
+
+
+    <br/><strong><h2>Requests</h2></strong>
+
+                <div class="panel-group" id="collapse-request-70bbbd4f-dd41-4baa-8d62-11ec69d3edb2" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-70bbbd4f-dd41-4baa-8d62-11ec69d3edb2">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-70bbbd4f-dd41-4baa-8d62-11ec69d3edb2" aria-controls="collapseOne">Health Check</a></h4>
+                        </div>
+        
+                        <div id="requestData-70bbbd4f-dd41-4baa-8d62-11ec69d3edb2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-70bbbd4f-dd41-4baa-8d62-11ec69d3edb2">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com//health/check" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com//health/check</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">180ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">233B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">2</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">{&quot;AvailabilityZone&quot;:&quot;a&quot;,&quot;Environment&quot;:&quot;qa102&quot;,&quot;HostedZone&quot;:&quot;martech-qa.je-labs.com&quot;,&quot;IsBeta&quot;:false,&quot;Tenant&quot;:&quot;all&quot;,&quot;Region&quot;:&quot;eu-west-1&quot;,&quot;IsHealthy&quot;:true,&quot;Branch&quot;:null,&quot;Commit&quot;:null,&quot;InstancePosition&quot;:&quot;referralsapi_002&quot;,&quot;Version&quot;:null}</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text={&quot;AvailabilityZone&quot;:&quot;a&quot;,&quot;Environment&quot;:&quot;qa102&quot;,&quot;HostedZone&quot;:&quot;martech-qa.je-labs.com&quot;,&quot;IsBeta&quot;:false,&quot;Tenant&quot;:&quot;all&quot;,&quot;Region&quot;:&quot;eu-west-1&quot;,&quot;IsHealthy&quot;:true,&quot;Branch&quot;:null,&quot;Commit&quot;:null,&quot;InstancePosition&quot;:&quot;referralsapi_002&quot;,&quot;Version&quot;:null}>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Tenant must be &#x27;all&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-64ea02b0-0781-4fe4-a574-64ad7fbce9e4" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-64ea02b0-0781-4fe4-a574-64ad7fbce9e4">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-64ea02b0-0781-4fe4-a574-64ad7fbce9e4" aria-controls="collapseOne">Get Referring User</a></h4>
+                        </div>
+        
+                        <div id="requestData-64ea02b0-0781-4fe4-a574-64ad7fbce9e4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-64ea02b0-0781-4fe4-a574-64ad7fbce9e4">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/referring_id_0000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/referring_id_0000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">86ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">351B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">4</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">{&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text={&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>GlobalUserId is &#x27;referring_id_0000001&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-eb65612e-4288-4f81-a577-0eea2d7545e9" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-eb65612e-4288-4f81-a577-0eea2d7545e9">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-eb65612e-4288-4f81-a577-0eea2d7545e9" aria-controls="collapseOne">Get Referring User Copy</a></h4>
+                        </div>
+        
+                        <div id="requestData-eb65612e-4288-4f81-a577-0eea2d7545e9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-eb65612e-4288-4f81-a577-0eea2d7545e9">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/referring_id_0000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/referring_id_0000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">40ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">351B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">4</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">{&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text={&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>GlobalUserId is &#x27;referring_id_0000001&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-85b7a2e3-b5e4-49d2-9e5a-94bc457fac09" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-85b7a2e3-b5e4-49d2-9e5a-94bc457fac09">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-85b7a2e3-b5e4-49d2-9e5a-94bc457fac09" aria-controls="collapseOne">Get Referring User - User Not Found</a></h4>
+                        </div>
+        
+                        <div id="requestData-85b7a2e3-b5e4-49d2-9e5a-94bc457fac09" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-85b7a2e3-b5e4-49d2-9e5a-94bc457fac09">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/invalid_user_id" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/invalid_user_id</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">41ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">17B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">&quot;invalid_user_id&quot;</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text=&quot;invalid_user_id&quot;>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 404</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-94546e17-0d0c-4275-8625-c66d2443596e" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-94546e17-0d0c-4275-8625-c66d2443596e">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-94546e17-0d0c-4275-8625-c66d2443596e" aria-controls="collapseOne">Get Referring User - Invalid Accept Header</a></h4>
+                        </div>
+        
+                        <div id="requestData-94546e17-0d0c-4275-8625-c66d2443596e" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-94546e17-0d0c-4275-8625-c66d2443596e">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/testuser_id_0000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referringuser/testuser_id_0000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">38ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">0B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">406</div><br/>
+        
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return - 406 Not Acceptable</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-5f56df40-7f9c-48f9-bc31-b4471f4ce4d2" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-5f56df40-7f9c-48f9-bc31-b4471f4ce4d2">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-5f56df40-7f9c-48f9-bc31-b4471f4ce4d2" aria-controls="collapseOne">Get Referral Report - JSON</a></h4>
+                        </div>
+        
+                        <div id="requestData-5f56df40-7f9c-48f9-bc31-b4471f4ce4d2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-5f56df40-7f9c-48f9-bc31-b4471f4ce4d2">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00&amp;usergraduated&#x3D;true" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00&amp;usergraduated&#x3D;true</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">57ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">243B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">3</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">[{&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000002&quot;,&quot;ReferredUserEmail&quot;:&quot;referred_0000004@test.com&quot;,&quot;ReferredUserName&quot;:&quot;referred_0000004_name&quot;,&quot;ReferringUserEmail&quot;:&quot;referring_0000002@test.com&quot;,&quot;ReferringUserName&quot;:&quot;referring_0000002_name&quot;}]</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text=[{&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000002&quot;,&quot;ReferredUserEmail&quot;:&quot;referred_0000004@test.com&quot;,&quot;ReferredUserName&quot;:&quot;referred_0000004_name&quot;,&quot;ReferringUserEmail&quot;:&quot;referring_0000002@test.com&quot;,&quot;ReferringUserName&quot;:&quot;referring_0000002_name&quot;}]>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-17f7c5b1-8ea2-482a-96c8-9510aebf5ae7" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-17f7c5b1-8ea2-482a-96c8-9510aebf5ae7">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-17f7c5b1-8ea2-482a-96c8-9510aebf5ae7" aria-controls="collapseOne">Get Referral Report - CSV</a></h4>
+                        </div>
+        
+                        <div id="requestData-17f7c5b1-8ea2-482a-96c8-9510aebf5ae7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-17f7c5b1-8ea2-482a-96c8-9510aebf5ae7">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00&amp;usergraduated&#x3D;true" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00&amp;usergraduated&#x3D;true</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">48ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">233B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">5</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">ReferralCode,ReferredUserEmail,ReferredUserName,ReferringUserEmail,ReferringUserName
+        &quot;00000000-0000-0000-0000-000000000002&quot;,&quot;referred_0000004@test.com&quot;,&quot;referred_0000004_name&quot;,&quot;referring_0000002@test.com&quot;,&quot;referring_0000002_name&quot;,
+        </pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text=ReferralCode,ReferredUserEmail,ReferredUserName,ReferringUserEmail,ReferringUserName
+        &quot;00000000-0000-0000-0000-000000000002&quot;,&quot;referred_0000004@test.com&quot;,&quot;referred_0000004_name&quot;,&quot;referring_0000002@test.com&quot;,&quot;referring_0000002_name&quot;,
+        >Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;text/csv; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Disposition header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Disposition header value is &#x27;attachment;filename&#x3D;ReferringUsers.csv&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-f68ca37e-0858-4433-baf7-6c7786f5cc4d" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-f68ca37e-0858-4433-baf7-6c7786f5cc4d">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-f68ca37e-0858-4433-baf7-6c7786f5cc4d" aria-controls="collapseOne">Get Referral Report - Invalid Accept Header</a></h4>
+                        </div>
+        
+                        <div id="requestData-f68ca37e-0858-4433-baf7-6c7786f5cc4d" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-f68ca37e-0858-4433-baf7-6c7786f5cc4d">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralreport/?fromDate&#x3D;2018-11-01T00:00:00&amp;toDate&#x3D;2018-11-30T00:00:00</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">40ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">0B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">406</div><br/>
+        
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return - 406 Not Acceptable</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-8cef2b48-57c5-4bab-acac-9a2826f13834" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-8cef2b48-57c5-4bab-acac-9a2826f13834">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-8cef2b48-57c5-4bab-acac-9a2826f13834" aria-controls="collapseOne">Get Referred User</a></h4>
+                        </div>
+        
+                        <div id="requestData-8cef2b48-57c5-4bab-acac-9a2826f13834" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-8cef2b48-57c5-4bab-acac-9a2826f13834">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/referred_id_0000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/referred_id_0000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">52ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">344B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">3</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">{&quot;Graduated&quot;:true,&quot;GlobalUserId&quot;:&quot;referred_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referred_0000001@test.com&quot;,&quot;Name&quot;:&quot;referred_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T19:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referred_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2015-11-26T19:00:05+00:00&quot;}</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text={&quot;Graduated&quot;:true,&quot;GlobalUserId&quot;:&quot;referred_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referred_0000001@test.com&quot;,&quot;Name&quot;:&quot;referred_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T19:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referred_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2015-11-26T19:00:05+00:00&quot;}>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-dd80a1ab-09a3-49f7-99cc-2cba0490858a" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-dd80a1ab-09a3-49f7-99cc-2cba0490858a">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-dd80a1ab-09a3-49f7-99cc-2cba0490858a" aria-controls="collapseOne">Get Referred User - User Not Found</a></h4>
+                        </div>
+        
+                        <div id="requestData-dd80a1ab-09a3-49f7-99cc-2cba0490858a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-dd80a1ab-09a3-49f7-99cc-2cba0490858a">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/invalid_id" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/invalid_id</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">38ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">12B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">3</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">&quot;invalid_id&quot;</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text=&quot;invalid_id&quot;>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 404</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-c0525cc8-2925-4fa4-a4ad-230f04be903d" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-c0525cc8-2925-4fa4-a4ad-230f04be903d">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-c0525cc8-2925-4fa4-a4ad-230f04be903d" aria-controls="collapseOne">Get Referred User - Invalid Accept Header</a></h4>
+                        </div>
+        
+                        <div id="requestData-c0525cc8-2925-4fa4-a4ad-230f04be903d" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-c0525cc8-2925-4fa4-a4ad-230f04be903d">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/testuser_id_0000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referreduser/testuser_id_0000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">44ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">0B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">406</div><br/>
+        
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return - 406 Not Acceptable</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-269f1645-fbb4-4106-8cab-ca0ef5cef8e5" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-269f1645-fbb4-4106-8cab-ca0ef5cef8e5">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-269f1645-fbb4-4106-8cab-ca0ef5cef8e5" aria-controls="collapseOne">Validate Referring User</a></h4>
+                        </div>
+        
+                        <div id="requestData-269f1645-fbb4-4106-8cab-ca0ef5cef8e5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-269f1645-fbb4-4106-8cab-ca0ef5cef8e5">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/00000000-0000-0000-0000-000000000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/00000000-0000-0000-0000-000000000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">38ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">351B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">3</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">{&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text={&quot;UserDeleted&quot;:false,&quot;GlobalUserId&quot;:&quot;referring_id_0000001&quot;,&quot;EmailAddress&quot;:&quot;referring_0000001@test.com&quot;,&quot;Name&quot;:&quot;referring_0000001_name&quot;,&quot;UserCreatedDate&quot;:&quot;2018-11-26T20:00:00+00:00&quot;,&quot;Tenant&quot;:&quot;uk&quot;,&quot;ReferralCode&quot;:&quot;00000000-0000-0000-0000-000000000001&quot;,&quot;QualifyingOrderId&quot;:&quot;referring_Order_0000001&quot;,&quot;QualifyingOrderPlacedDate&quot;:&quot;2018-11-26T20:00:05+00:00&quot;}>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header is present</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Content-Type header value is &#x27;application/json; charset&#x3D;utf-8&#x27;</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-e1fe2e03-4bdf-4fd9-862b-f3668873342e" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-e1fe2e03-4bdf-4fd9-862b-f3668873342e">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-e1fe2e03-4bdf-4fd9-862b-f3668873342e" aria-controls="collapseOne">Validate Referring User - Invalid Code</a></h4>
+                        </div>
+        
+                        <div id="requestData-e1fe2e03-4bdf-4fd9-862b-f3668873342e" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-e1fe2e03-4bdf-4fd9-862b-f3668873342e">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/invalid-referral-code" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/invalid-referral-code</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">37ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">23B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+        
+                                  <div class="col-md-12">&nbsp;</div>
+                                  <br/><div class="col-md-4">Response body</div><div class="col-md-8" style='word-break:break-all;float:right'><pre class="stringifyPretty">&quot;invalid-referral-code&quot;</pre>
+                                    <button class="btn btn-outline-secondary" type="button" data-clipboard-text=&quot;invalid-referral-code&quot;>Copy to clipboard</button>
+                                  </div><br/>
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return 404</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="collapse-request-5414a2be-d5db-4e91-af23-4fb0207c6392" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading tego-bg-green" role="tab" id="requestHead-5414a2be-d5db-4e91-af23-4fb0207c6392">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-5414a2be-d5db-4e91-af23-4fb0207c6392" aria-controls="collapseOne">Validate Referring User - Invalid Accept Header</a></h4>
+                        </div>
+        
+                        <div id="requestData-5414a2be-d5db-4e91-af23-4fb0207c6392" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-5414a2be-d5db-4e91-af23-4fb0207c6392">
+                            <div class="panel-body">
+        
+                                    <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/00000000-0000-0000-0000-000000000001" target="_blank">http://referralsapi-qa102.martech-qa.je-labs.com/api/referralcode/00000000-0000-0000-0000-000000000001</a></div>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">36ms</div><br/>
+                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">0B</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">1</div>
+                                <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+        
+                                <div class="col-md-12">&nbsp;</div>
+                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">406</div><br/>
+        
+        
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Tests</div>
+        
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive table-condensed">
+                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                            <tbody><tr><td>Should return - 406 Not Acceptable</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                        </table>
+                                    </div><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- CSS Style for JSON Syntax Highlighting -->
+	<style type="text/css">
+	pre {
+		outline: 1px solid # ccc;
+		padding: 5px;
+		margin: 5px;
+	}
+	.json-string {
+		color: rgb(128, 0, 0);
+	}
+	.json-number {
+		color: rgb(255, 128, 0);
+	}
+	.json-boolean {
+		color: rgb(0, 0, 255);
+	}
+	.json-null {
+		color: rgb(0, 0, 255);
+	}
+	.json-key {
+		color: rgb(128, 0, 0);
+	}
+	</style>
+	
+    <!-- Copy Response Body To Clipboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn');
+        
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    </script>
+
+	<!-- JSON Syntax Highlighting -->
+	<script type="text/javascript">
+	function syntaxHighlight(json) {
+		if (typeof json != 'string') {
+			 json = JSON.stringify(json, null, 2);
+		}
+		json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+			var cls = 'json-number';
+			if (/^"/.test(match)) {
+				if (/:$/.test(match)) {
+					cls = 'json-key';
+				} else {
+					cls = 'json-string';
+				}
+			} else if (/true|false/.test(match)) {
+				cls = 'json-boolean';
+			} else if (/null/.test(match)) {
+				cls = 'json-null';
+			}
+			return '<span class="' + cls + '">' + match + '</span>';
+		});
+	}
+	// Verify if text is JSON
+	function isJSON(data) 
+	{
+	   var ret = true;
+	   try {
+		  JSON.parse(data);
+	   }catch(e) {
+		  ret = false;
+	   }
+	   return ret;
+	}
+	// Stringify each element with class 'stringifyPretty'
+	$(".stringifyPretty").each(function () {	
+		var data = $(this).text();
+		
+		// Verify whether data is JSON
+		if(isJSON(data))
+		{
+			obj = JSON.parse(data);
+			data = syntaxHighlight(obj);
+		}
+		
+		$(this).html(data);
+	});
+	</script>
